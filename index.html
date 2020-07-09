@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyricist - Explore the world of Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+
+</head>
+<body>
+    <section>
+        <div class="showcase">
+            <header>
+                <h1>Lyricist</h1>
+            </header>
+            <div class="text">
+                <h1>Explore The World of Music</h1>
+                <p>Search for the lyrics of your favorite music</p>
+            </div>
+            
+            <div class="search-box">
+                <div class="artiste-track">
+                    <form id="form1" action="">
+                        <legend>Search By Artiste and Song Title</legend> 
+                        <div class="form-group">
+                            <input type="text" name="artiste" id="artist" placeholder="Artiste Name">
+                            <input type="text" name="title" id="track" placeholder="Song Title">
+                            <input type="submit" value="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="output-container">
+            <div class="bounceAnimation">
+                <div class="circle animated pulse"></div>
+                <div class="circle animated pulse"></div>
+                <div class="circle animated pulse"></div>
+            </div>
+            <div id="output">
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <p>&copy; <strong>Barnabas Asha</strong></p>
+            <div class="contact">
+                <a href="mailto:barnabee58@gmail.com"><img src="./images/envelope-line.svg" alt=""></a>
+                <a href="https://twitter.com/BarnabasAsha"><img src="./images/twitter-line.svg" alt=""></a>
+                <a href="https://github.com/BarnabasAsha/"><img src="./images/github.svg" alt=""></a>
+                <a href="https://ng.linkedin.com/in/barnabas-asha-47478b190"><img src="./images/linkedin-round.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let i = 0;
+        const background = [];
+        background[0] = './images/img1.jpg'
+        background[1] = './images/img2.jpeg'
+        background[2] = './images/img3.jpeg'
+        background[3] = './images/img4.jpeg'
+        background[4] = './images/img5.jpeg'
+        const time = 3000;
+
+        function slide () {
+            document.querySelector('.showcase').style.background = `url(${background[i]})`;
+            document.querySelector('.showcase').style.backgroundRepeat = 'no-repeat';
+            document.querySelector('.showcase').style.backgroundSize = 'cover';
+            document.querySelector('.showcase').style.backgroundPosition = 'center';
+            if(i < background.length - 1) {
+                i++
+            }else {
+                i = 0;
+            }
+            setTimeout(slide, time)
+        }
+        window.onload = slide;
+
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

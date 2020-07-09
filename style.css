@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    background: rgb(245, 222, 179);
+    position: relative;
+}
+
+.showcase {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1em;
+}
+
+.showcase::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 80vh;
+    background: rgba(245, 222, 179, 0.486);
+    z-index: 2;
+}
+
+.showcase header {
+    z-index: 5;
+    border-bottom: 3px solid black;
+    border-left: 2px solid black;
+    padding-left: 5px;
+    font-size: 1.6rem;
+}
+
+
+.showcase .text {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    z-index: 5;
+    text-align: center;
+}
+
+.showcase .text > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.showcase .text > p {
+    font-size: 1.5rem;
+}
+
+.showcase .search-box {
+    z-index: 5;
+    margin-bottom: 3em;
+}
+
+.showcase input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5em 0.2em;
+}
+
+.artiste-track form .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.artiste-track form input [type = text]{
+    width: 100%;
+}
+
+
+
+.search-box input[type = submit]{
+    cursor: pointer;
+}
+
+.search-box legend {
+    margin: 0.5em auto;
+    font-weight: 600;
+}
+
+.output-container {
+    background: rgba(245, 222, 179, 0.5);
+    padding: 2em 6em;
+    display: block;
+}
+
+#output {
+    padding: 1em 2em 5em 2em;
+    background: #fff;
+    border-radius: 20px;
+    display: block;
+    min-height: 250px;
+}
+
+#output h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#output p {
+    font-size: 1.2rem;
+    line-height: 2.7rem;
+    text-align: center;
+}
+
+#output img {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bounceAnimation {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transform: translateY(200%);
+}
+
+.bounceAnimation .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(245, 222, 179);
+    margin-right: 10px;
+}
+
+.bounceAnimation .animated {
+    animation-iteration-count: 5;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.footer .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.footer .contact a{
+    margin-right: 20px;
+}
+
+.footer .p {
+    margin-bottom: 1em;
+}
+
+.footer .contact img {
+    width: 30px;
+}
+
+@media only screen and (max-width: 350px) {
+    .showcase {
+        height: 80vh;
+    }
+    .showcase::before{
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {   
+
+    .showcase {
+        height: 60vh;
+    }
+
+    .showcase::before {
+        height: 60vh;
+    }
+
+    .showcase header {
+        font-size: 1.4rem;
+    }
+
+    .showcase .text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .showcase .text > h1 {
+        font-size: 1.4rem;
+    }
+
+    .showcase .text > p {
+        font-size: 1rem;
+    }
+
+
+    .artiste-track form .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .artiste-track form input {
+        width: 100%;
+    }
+
+    .output-container {
+        padding: 1rem;
+    }
+
+    #output {
+        padding: 1rem;
+    }
+
+    #output img {
+        width: 250px;
+    }
+}
+@media (min-width: 481px) and (max-width: 1500px){
+    .showcase {
+        height: 50vh;
+    }
+
+    .showcase::before{
+        height: 50vh;
+    }
+}
