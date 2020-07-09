@@ -28,8 +28,10 @@ const matcherLyrics =  async () => {
     
   }).catch(error=> {
     console.log(error);
-    if (response.status == '429') {errorMessage('429')}
-    else if (response.status == '404') errorMessage('network')
+    if (error.status === '404'){
+      errorMessage('404')
+    }
+    else errorMessage(error);
   })
 }
 
@@ -65,7 +67,7 @@ function errorMessage (message) {
     else {
       result.innerHTML = ` 
      <img src='./images/server.svg'>
-     <p>Can connect to our server</p>
+     <p>Can't connect to server try again in few minutes</p>
     `
     }
 }
