@@ -235,12 +235,3 @@ body {
         width: 250px;
     }
 }
-@media (min-width: 481px) and (max-width: 1500px){
-    .showcase {
-        height: 50vh;
-    }
-
-    .showcase::before{
-        height: 50vh;
-    }
-}
